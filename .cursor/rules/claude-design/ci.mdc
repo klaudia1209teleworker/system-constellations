@@ -1,0 +1,172 @@
+---
+description: "系統排列師培訓課 CI — C｜暖壤秩序"
+globs:
+  - "**/*.tsx"
+  - "**/*.jsx"
+  - "**/*.css"
+  - "**/*.scss"
+  - "tailwind.config.*"
+alwaysApply: true
+---
+
+# 系統排列師培訓課 CI 設計系統
+
+## 專案資訊
+
+- **客戶 / 專案名**：系統排列師培訓課（Stephen Victor）
+- **版本**：v1.0
+- **最後更新**：2026-11-21
+- **Design system 來源**：品牌提案 **C｜暖壤秩序**（已選定）
+
+---
+
+## 色彩 Token（唯一合法色票）
+
+| Token | Hex | 用途說明 | Tailwind class |
+|-------|-----|---------|----------------|
+| `primary` | `#5C3D2E` | 主色、CTA、H1/H2、重點強調 | `bg-primary` `text-primary` `border-primary` |
+| `secondary` | `#C4A484` | 輔助色、次要按鈕、背景裝飾 | `bg-secondary` `text-secondary` |
+| `text` | `#2A211C` | 所有內文、H3、Body | `text-text` |
+| `highlight` | `#8B3A2F` | 警示、錯誤、風險提示 | `bg-highlight` `text-highlight` |
+| `accent` | `#6B7F5A` | 成功、確認、完成狀態 | `bg-accent` `text-accent` |
+| `bg` | `#EDE6DB` | 頁面背景 | `bg-bg` |
+
+### 可選延伸 token
+
+| Token | Hex | 用途 |
+|-------|-----|------|
+| `muted` | `#7A6E64` | 次要資訊、placeholder |
+| `border` | `#D2C6B6` | 一般邊框 |
+| `surface` | `#F7F2EA` | 區塊／Modal 背景（與 bg 有層次差） |
+
+---
+
+## 字型設定
+
+| 用途 | 字型家族 | Tailwind class |
+|------|---------|----------------|
+| UI 主字型（內文） | IBM Plex Sans + Noto Sans TC | `font-sans` |
+| 顯示／標題襯線 | Libre Baskerville | `font-serif` |
+| Mono（程式碼） | ui-monospace, SFMono-Regular | `font-mono` |
+
+### Tailwind config 對應
+
+```ts
+// tailwind.config.ts
+theme: {
+  extend: {
+    fontFamily: {
+      sans: ['"IBM Plex Sans"', '"Noto Sans TC"', 'sans-serif'],
+      serif: ['"Libre Baskerville"', 'serif'],
+    },
+  },
+},
+```
+
+### 字型載入
+
+- Vite 靜態站：於 `index.html` 以 `<link>` 載入 Google Fonts（preconnect + stylesheet）
+- **禁止在 globals.css 用 `@import url(...)` 載入字型**（影響 Core Web Vitals）
+
+---
+
+## 標題階層（Type Scale）
+
+| Level | Tailwind class | 用途 |
+|-------|---------------|------|
+| H1 | `font-serif text-4xl md:text-5xl font-bold text-primary` | 頁面主標題 |
+| H2 | `font-serif text-2xl md:text-3xl font-bold text-primary` | 區塊標題 |
+| H3 | `text-xl md:text-2xl font-semibold text-text` | 子區塊標題 |
+| H4 | `text-lg font-semibold text-text` | 小標 |
+| Body | `text-base text-text` | 內文 |
+| Small | `text-sm text-muted` | 輔助資訊 |
+
+---
+
+## 間距與版面
+
+- **Grid 基準**：8px（Tailwind 預設 `space-2` = 8px）
+- **Section padding**：`py-16 md:py-24`
+- **Container max-width**：`max-w-3xl mx-auto px-4 md:px-8`（長文閱讀）
+
+---
+
+## 圓角規範
+
+| 元件 | Tailwind class | px 值 |
+|------|---------------|-------|
+| Button | `rounded-md` | 6px |
+| Input | `rounded-md` | 6px |
+| Image | `rounded-lg` | 8px |
+
+> 預設少用卡片；不為裝飾加 border／shadow／radius。
+
+---
+
+## 陰影
+
+| 層級 | Tailwind class | 用途 |
+|------|---------------|------|
+| Subtle | `shadow-sm` | 必要互動浮層 |
+| Medium | `shadow-md` | Hover、Dropdown |
+
+---
+
+## Tailwind Config 模板
+
+```ts
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: '#5C3D2E',
+        secondary: '#C4A484',
+        text: '#2A211C',
+        highlight: '#8B3A2F',
+        accent: '#6B7F5A',
+        bg: '#EDE6DB',
+        muted: '#7A6E64',
+        border: '#D2C6B6',
+        surface: '#F7F2EA',
+      },
+      fontFamily: {
+        sans: ['"IBM Plex Sans"', '"Noto Sans TC"', 'sans-serif'],
+        serif: ['"Libre Baskerville"', 'serif'],
+      },
+    },
+  },
+  plugins: [],
+}
+
+export default config
+```
+
+---
+
+## 禁止事項
+
+1. **禁止使用 Tailwind 預設色**（例外：`white` / `black` / `transparent` / `current`）
+2. **禁止使用裸 hex**（必須用 token class）
+3. **禁止引入第三方 UI kit 的預設主題**
+4. **禁止在元件內 hardcode 字型家族**
+5. **Hero**：單一全幅、品牌／課程名為主視覺；勿統計列、勿浮貼 badge、勿 inset 卡片 hero
+6. **報名 CTA**：導向官方 Line `@749vsiqk`；不做線上送出表單
+
+---
+
+## 品牌資產
+
+- **Logo**：待補（目前以字排「系統排列師培訓」為品牌訊號）
+- **Favicon**：`public/favicon.svg`
+- **OG Image**：待補
+
+---
+
+## 變更紀錄
+
+| 日期 | 版本 | 變更內容 | 負責人 |
+|------|------|---------|-------|
+| 2026-11-21 | v1.0 | 初版：C｜暖壤秩序 | Kay / Agent |
