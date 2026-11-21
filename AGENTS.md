@@ -6,6 +6,7 @@
 | 技術棧 | Vite + React + TypeScript + Tailwind CSS v3 |
 | 品牌 | C｜暖壤秩序（見 `.cursor/rules/claude-design/ci.mdc`） |
 | 報名 CTA | 官方 Line `@749vsiqk`（不做線上送出表單） |
+| 語言 | 繁中預設／英文完整版；nav 切換；`localStorage` key `sc-locale` |
 | 內容權威 | Project store `docs/course-content-full.md` |
 
 ## 常用指令
