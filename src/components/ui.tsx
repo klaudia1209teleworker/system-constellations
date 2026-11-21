@@ -143,19 +143,26 @@ export function SplitBlocks({
 export function TopicRows({
   topics,
 }: {
-  topics: { title: string; en?: string; detail?: ReactNode }[]
+  topics: {
+    title: string
+    subtitle?: string
+    detail?: ReactNode
+  }[]
 }) {
   return (
     <ol className="mt-6 divide-y divide-border border-y border-border">
       {topics.map((topic, index) => (
-        <li key={topic.title} className="grid gap-2 py-5 sm:grid-cols-[3rem_1fr]">
+        <li
+          key={`${index}-${topic.title}`}
+          className="grid gap-2 py-5 sm:grid-cols-[3rem_1fr]"
+        >
           <span className="font-serif text-lg font-bold text-secondary">
             {String(index + 1).padStart(2, '0')}
           </span>
           <div>
             <p className="font-medium text-primary">{topic.title}</p>
-            {topic.en ? (
-              <p className="mt-1 text-sm text-muted">{topic.en}</p>
+            {topic.subtitle && topic.subtitle !== topic.title ? (
+              <p className="mt-1 text-sm text-muted">{topic.subtitle}</p>
             ) : null}
             {topic.detail ? (
               <div className="mt-3 text-base leading-relaxed text-text">
@@ -189,16 +196,20 @@ export function CheckList({ items }: { items: string[] }) {
 /** 課表月曆格 */
 export function ScheduleGrid({
   rows,
+  monthLabel = '月份',
+  daysLabel = '上課日期',
 }: {
   rows: { month: string; days: string }[]
+  monthLabel?: string
+  daysLabel?: string
 }) {
   return (
     <div className="mt-6 overflow-hidden border border-border">
       <table className="w-full text-left text-sm md:text-base">
         <thead className="bg-primary text-surface">
           <tr>
-            <th className="px-4 py-3 font-medium">月份</th>
-            <th className="px-4 py-3 font-medium">上課日期</th>
+            <th className="px-4 py-3 font-medium">{monthLabel}</th>
+            <th className="px-4 py-3 font-medium">{daysLabel}</th>
           </tr>
         </thead>
         <tbody>
