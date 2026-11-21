@@ -641,15 +641,8 @@ export default function App() {
           ))}
         </ol>
 
-        <Subheading>匯款帳號</Subheading>
-        <FactGrid
-          items={[
-            { label: '銀行', value: '華南銀行（代碼 008）' },
-            { label: '帳號', value: '112-10-1202760' },
-          ]}
-        />
-        <p className="mt-3 text-sm text-muted">
-          依匯款時間排定報名序號。
+        <p className="mt-8 text-sm text-muted">
+          （依匯款時間排定報名序號）
         </p>
 
         <Subheading>取消／退費條款</Subheading>
