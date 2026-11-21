@@ -641,6 +641,10 @@ export default function App() {
           ))}
         </ol>
 
+        <p className="mt-8 text-sm text-muted">
+          （依匯款時間排定報名序號）
+        </p>
+
         <Subheading>取消／退費條款</Subheading>
         <StepList
           steps={[
