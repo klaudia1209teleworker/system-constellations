@@ -13,7 +13,7 @@ export function SiteNav() {
       className="sticky top-0 z-40 border-b border-border/70 bg-bg/90 backdrop-blur-sm"
       aria-label="頁面導覽"
     >
-      <div className="mx-auto flex max-w-3xl items-center gap-1 overflow-x-auto px-4 py-3 md:px-8">
+      <div className="mx-auto flex max-w-5xl items-center gap-1 overflow-x-auto px-4 py-3 md:px-8">
         {links.map((link) => (
           <a
             key={link.href}

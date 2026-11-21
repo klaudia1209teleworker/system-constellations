@@ -170,3 +170,5 @@ export default config
 | 日期 | 版本 | 變更內容 | 負責人 |
 |------|------|---------|-------|
 | 2026-11-21 | v1.0 | 初版：C｜暖壤秩序 | Kay / Agent |
+| 2026-11-21 | v1.1 | 頁面改結構元件（FactGrid／StepList／TopicRows 等），少純長文 | Kay / Agent |
+| 2026-11-21 | v1.2 | GitHub Pages：`base=/system-constellations/` + Actions 部署 | Kay / Agent |

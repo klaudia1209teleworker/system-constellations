@@ -2,6 +2,12 @@
 
 Stephen Victor 系統排列師培訓課靜態資訊站（Vite + React + TypeScript）。
 
+## 公開網址（GitHub Pages）
+
+https://klaudia1209teleworker.github.io/system-constellations/
+
+`main` 推送後由 Actions 自動建置部署。
+
 ## 開發
 
 ```bash
@@ -9,7 +15,7 @@ npm install
 npm run dev
 ```
 
-預覽正式建置：
+預覽正式建置（注意 `base` 為 `/system-constellations/`）：
 
 ```bash
 npm run build
