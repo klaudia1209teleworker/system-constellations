@@ -283,17 +283,19 @@ export default function App() {
               <h2 className="font-serif text-2xl font-bold md:text-3xl">
                 {t.line.title}
               </h2>
-              <p className="mt-3 text-secondary">ID: {LINE_ID}</p>
-              <div className="mt-8 flex flex-wrap items-center gap-4">
-                <LineCta variant="surface" label={t.line.cta} />
+              <p className="mt-3 text-secondary">
+                ID:{' '}
                 <a
                   href={LINE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-secondary underline-offset-4 hover:underline"
+                  className="underline-offset-4 hover:underline"
                 >
                   {LINE_ID}
                 </a>
+              </p>
+              <div className="mt-8">
+                <LineCta variant="surface" label={t.line.cta} />
               </div>
               <p className="mt-10 font-serif text-lg text-surface/95">
                 {t.line.closing}
