@@ -1,5 +1,4 @@
 import { useLocale } from '../i18n/useLocale'
-import { LanguageSwitcher } from './LanguageSwitcher'
 
 export function SiteNav() {
   const { t } = useLocale()
@@ -9,8 +8,8 @@ export function SiteNav() {
       className="sticky top-0 z-40 border-b border-border/70 bg-bg/90 backdrop-blur-sm"
       aria-label={t.nav.aria}
     >
-      <div className="mx-auto flex max-w-5xl items-center gap-2 overflow-x-auto px-4 py-3 md:gap-3 md:px-8">
-        <div className="flex min-w-0 flex-1 items-center gap-1 overflow-x-auto">
+      <div className="mx-auto flex max-w-5xl items-center overflow-x-auto px-4 py-3 md:px-8">
+        <div className="flex min-w-0 items-center gap-1 overflow-x-auto">
           {t.nav.links.map((link) => (
             <a
               key={link.href}
@@ -21,7 +20,6 @@ export function SiteNav() {
             </a>
           ))}
         </div>
-        <LanguageSwitcher />
       </div>
     </nav>
   )
