@@ -356,12 +356,9 @@ export const zh: SiteContent = {
         value: 'Stephen Victor 英文授課，現場配有家排師即席翻譯',
       },
     ],
-    scheduleButton: '另開視窗查看完整課表',
-    scheduleWindowTitle: '2027 培訓課表',
+    scheduleTitle: '2027 課表',
     scheduleMonthLabel: '月份',
     scheduleDaysLabel: '上課日期',
-    scheduleCloseHint: '關閉此視窗即可返回主頁。',
-    schedulePopupBlocked: '無法開啟課表視窗，請允許本站彈出視窗後再試一次。',
     schedule: [
       { month: '三月', days: '3/6 (六)、3/7 (日）、3/21 (日）' },
       { month: '四月', days: '4/17 (六)、4/18 (日）、4/25 (日）' },
