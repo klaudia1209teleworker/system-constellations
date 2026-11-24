@@ -356,6 +356,55 @@ export const en: SiteContent = {
           'Stephen teaches in English, with live interpretation by a constellation facilitator',
       },
     ],
+    scheduleButton: 'Open full schedule in a new window',
+    scheduleWindowTitle: '2027 Training Schedule',
+    scheduleMonthLabel: 'Month',
+    scheduleDaysLabel: 'Class dates',
+    scheduleCloseHint: 'Close this window to return to the main page.',
+    schedulePopupBlocked:
+      'Unable to open the schedule window. Please allow pop-ups for this site and try again.',
+    schedule: [
+      {
+        month: 'March',
+        days: 'Mar 6 (Sat), Mar 7 (Sun), Mar 21 (Sun)',
+      },
+      {
+        month: 'April',
+        days: 'Apr 17 (Sat), Apr 18 (Sun), Apr 25 (Sun)',
+      },
+      {
+        month: 'May',
+        days: 'May 16 (Sun), May 22 (Sat), May 23 (Sun)',
+      },
+      {
+        month: 'June',
+        days: 'Jun 12 (Sat), Jun 13 (Sun), Jun 20 (Sun)',
+      },
+      {
+        month: 'July',
+        days: 'Jul 10 (Sat), Jul 11 (Sun), Jul 18 (Sun)',
+      },
+      {
+        month: 'August',
+        days: 'Aug 14 (Sat), Aug 15 (Sun), Aug 22 (Sun)',
+      },
+      {
+        month: 'September',
+        days: 'Sep 11 (Sat), Sep 12 (Sun), Sep 19 (Sun)',
+      },
+      {
+        month: 'October',
+        days: 'Oct 10 (Sun), Oct 11 (Mon), Oct 17 (Sun)',
+      },
+      {
+        month: 'November',
+        days: 'Nov 13 (Sat), Nov 14 (Sun), Nov 21 (Sun)',
+      },
+      {
+        month: 'December',
+        days: 'Dec 11 (Sat), Dec 12 (Sun), Dec 19 (Sun)',
+      },
+    ],
     cta: 'Contact via official Line',
   },
   line: {

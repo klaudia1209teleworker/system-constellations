@@ -1,5 +1,6 @@
 import { Hero } from './components/Hero'
 import { LineCta } from './components/LineCta'
+import { ScheduleOpenButton } from './components/ScheduleOpenButton'
 import { Section } from './components/Section'
 import { SiteNav } from './components/SiteNav'
 import {
@@ -242,7 +243,8 @@ export default function App() {
         lead={t.overview.lead}
       >
         <FactGrid items={t.overview.facts} />
-        <div className="mt-10">
+        <div className="mt-8 flex flex-wrap items-center gap-4">
+          <ScheduleOpenButton />
           <LineCta label={t.overview.cta} />
         </div>
       </Section>
