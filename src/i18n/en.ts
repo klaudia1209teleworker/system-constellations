@@ -9,7 +9,6 @@ export const en: SiteContent = {
   nav: {
     aria: 'Page navigation',
     links: [
-      { href: '#intro', label: 'Context' },
       { href: '#curriculum', label: 'Curriculum' },
       { href: '#terms', label: 'Terms' },
       { href: '#certification', label: 'Certificates' },

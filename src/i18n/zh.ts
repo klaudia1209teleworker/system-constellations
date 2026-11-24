@@ -9,7 +9,6 @@ export const zh: SiteContent = {
   nav: {
     aria: '頁面導覽',
     links: [
-      { href: '#intro', label: '前言' },
       { href: '#curriculum', label: '培訓內容' },
       { href: '#terms', label: '條款' },
       { href: '#certification', label: '證書' },
