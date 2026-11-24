@@ -94,6 +94,7 @@ export const zh: SiteContent = {
     approachesNote:
       'Stephen 老師將教授每一種排列方法，但會以海靈格的古典排列方法為主要教學重點。學員的能力評量，也將主要以古典排列作為評核依據。',
     section2: '二、Stephen Victor 的教學意圖',
+    section2En: 'Stephen Victor’s Intent',
     intentLead:
       '培養能夠以尊重人性、善待他人的態度生活與工作的實務工作者，並在學習如何「完整地去愛」的過程中：',
     intentItems: [
@@ -118,6 +119,7 @@ export const zh: SiteContent = {
     methodsNote:
       '換句話說，學員不只要學會如何操作排列，也要透過實際體驗，培養對排列工作的理解、感知與掌握能力。',
     section4: '四、培訓的具體架構與流程',
+    section4En: 'Specific Structure and Process of Training',
     process: [
       {
         title: '講授',
