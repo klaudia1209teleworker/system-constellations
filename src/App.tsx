@@ -1,6 +1,5 @@
 import { Hero } from './components/Hero'
 import { LineCta } from './components/LineCta'
-import { ScheduleOpenButton } from './components/ScheduleOpenButton'
 import { Section } from './components/Section'
 import { SiteNav } from './components/SiteNav'
 import {
@@ -8,6 +7,7 @@ import {
   Callout,
   CheckList,
   FactGrid,
+  ScheduleGrid,
   SplitBlocks,
   StepList,
   Subheading,
@@ -243,8 +243,15 @@ export default function App() {
         lead={t.overview.lead}
       >
         <FactGrid items={t.overview.facts} />
-        <div className="mt-8 flex flex-wrap items-center gap-4">
-          <ScheduleOpenButton />
+
+        <Subheading>{t.overview.scheduleTitle}</Subheading>
+        <ScheduleGrid
+          rows={t.overview.schedule}
+          monthLabel={t.overview.scheduleMonthLabel}
+          daysLabel={t.overview.scheduleDaysLabel}
+        />
+
+        <div className="mt-10">
           <LineCta label={t.overview.cta} />
         </div>
       </Section>

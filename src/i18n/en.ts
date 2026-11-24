@@ -356,13 +356,9 @@ export const en: SiteContent = {
           'Stephen teaches in English, with live interpretation by a constellation facilitator',
       },
     ],
-    scheduleButton: 'Open full schedule in a new window',
-    scheduleWindowTitle: '2027 Training Schedule',
+    scheduleTitle: '2027 schedule',
     scheduleMonthLabel: 'Month',
     scheduleDaysLabel: 'Class dates',
-    scheduleCloseHint: 'Close this window to return to the main page.',
-    schedulePopupBlocked:
-      'Unable to open the schedule window. Please allow pop-ups for this site and try again.',
     schedule: [
       {
         month: 'March',
