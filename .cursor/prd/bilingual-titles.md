@@ -12,9 +12,9 @@
 
 ## 站面實作
 
-- `TopicRows`：`title` + `subtitle`
-- `Subheading`：區塊標題可傳 `subtitle`
-- `StepList`／`BulletList`／`BilingualNameList`：同樣支援次行英文
+- `TopicRows`：`title` + `subtitle`（課綱項目、**四、培訓架構與流程** 各步驟皆用此元件）
+- `Subheading`：區塊標題可傳 `subtitle`（含「四、培訓的具體架構與流程」＋英文次行）
+- `BulletList`／`BilingualNameList`：同樣支援次行英文
 - 文案來源：`src/i18n/zh.ts`（中文站雙語）、`en.ts`（英文站僅英文）
 
 ## 例外

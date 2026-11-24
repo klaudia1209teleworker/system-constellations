@@ -10,7 +10,6 @@ import {
   FactGrid,
   ScheduleGrid,
   SplitBlocks,
-  StepList,
   Subheading,
   TopicRows,
 } from './components/ui'
@@ -95,7 +94,13 @@ export default function App() {
         <Subheading subtitle={t.curriculum.section4En}>
           {t.curriculum.section4}
         </Subheading>
-        <StepList steps={t.curriculum.process} />
+        <TopicRows
+          topics={t.curriculum.process.map((step) => ({
+            title: step.title,
+            subtitle: step.subtitle,
+            detail: step.body,
+          }))}
+        />
 
         <Subheading subtitle={t.curriculum.section5En}>
           {t.curriculum.section5}
