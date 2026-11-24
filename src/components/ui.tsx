@@ -369,3 +369,45 @@ export function BilingualNameList({
     </ul>
   )
 }
+
+function BadgeIcon({ className = '' }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      aria-hidden="true"
+      className={className}
+    >
+      <circle cx="12" cy="9" r="5.25" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M9.25 13.5 8 21l4-2.25L16 21l-1.25-7.5"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+      />
+      <path
+        d="m10.25 8.75 1.2 1.2 2.55-2.55"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
+
+/** 認證／徽章列表：無匡線，以 badge icon 標示 */
+export function BadgeList({ items }: { items: string[] }) {
+  return (
+    <ul className="mt-4 flex flex-col gap-4">
+      {items.map((item) => (
+        <li key={item} className="flex items-start gap-3">
+          <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-secondary/15 text-secondary">
+            <BadgeIcon className="h-5 w-5" />
+          </span>
+          <span className="pt-1 font-medium text-primary">{item}</span>
+        </li>
+      ))}
+    </ul>
+  )
+}

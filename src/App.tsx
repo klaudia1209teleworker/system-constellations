@@ -3,6 +3,7 @@ import { LineCta } from './components/LineCta'
 import { Section } from './components/Section'
 import { SiteNav } from './components/SiteNav'
 import {
+  BadgeList,
   BilingualNameList,
   BulletList,
   Callout,
@@ -246,16 +247,7 @@ export default function App() {
         </div>
 
         <Subheading>{t.teacher.credentialsTitle}</Subheading>
-        <ul className="mt-4 space-y-0 border-y border-border">
-          {t.teacher.credentials.map((item) => (
-            <li
-              key={item}
-              className="border-b border-border py-3 font-medium text-primary last:border-b-0"
-            >
-              {item}
-            </li>
-          ))}
-        </ul>
+        <BadgeList items={t.teacher.credentials} />
       </Section>
 
       <Section
