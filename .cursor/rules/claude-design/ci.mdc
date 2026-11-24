@@ -25,7 +25,7 @@ alwaysApply: true
 | Token | Hex | 用途說明 | Tailwind class |
 |-------|-----|---------|----------------|
 | `primary` | `#5C3D2E` | 主色、CTA、H1/H2、重點強調 | `bg-primary` `text-primary` `border-primary` |
-| `secondary` | `#C4A484` | 輔助色、次要按鈕、背景裝飾 | `bg-secondary` `text-secondary` |
+| `secondary` | `#C4A484` | 輔助色、次要按鈕、背景裝飾、**列表圓點（bullet）** | `bg-secondary` `text-secondary` |
 | `text` | `#2A211C` | 所有內文、H3、Body | `text-text` |
 | `highlight` | `#8B3A2F` | 警示、錯誤、風險提示 | `bg-highlight` `text-highlight` |
 | `accent` | `#6B7F5A` | 成功、確認、完成狀態 | `bg-accent` `text-accent` |
