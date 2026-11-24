@@ -78,6 +78,7 @@ export interface SiteContent {
     approaches: BilingualName[]
     approachesNote: string
     section2: string
+    section2En?: string
     intentLead: string
     intentItems: string[]
     section3: string
@@ -85,6 +86,7 @@ export interface SiteContent {
     methods: SplitItem[]
     methodsNote: string
     section4: string
+    section4En?: string
     process: StepItem[]
     section5: string
     section5En?: string

@@ -80,7 +80,9 @@ export default function App() {
         <BilingualNameList items={t.curriculum.approaches} />
         <p className="mt-6 max-w-3xl">{t.curriculum.approachesNote}</p>
 
-        <Subheading>{t.curriculum.section2}</Subheading>
+        <Subheading subtitle={t.curriculum.section2En}>
+          {t.curriculum.section2}
+        </Subheading>
         <p className="max-w-3xl">{t.curriculum.intentLead}</p>
         <CheckList items={t.curriculum.intentItems} />
 
@@ -90,7 +92,9 @@ export default function App() {
         <SplitBlocks items={t.curriculum.methods} />
         <p className="mt-6 max-w-3xl text-muted">{t.curriculum.methodsNote}</p>
 
-        <Subheading>{t.curriculum.section4}</Subheading>
+        <Subheading subtitle={t.curriculum.section4En}>
+          {t.curriculum.section4}
+        </Subheading>
         <StepList steps={t.curriculum.process} />
 
         <Subheading subtitle={t.curriculum.section5En}>
