@@ -201,14 +201,14 @@ export function TopicRows({
   )
 }
 
-/** 檢查清單 */
+/** 檢查清單（圓點採 CI secondary） */
 export function CheckList({ items }: { items: string[] }) {
   return (
     <ul className="mt-4 space-y-3">
       {items.map((item) => (
         <li key={item} className="flex gap-3">
           <span
-            className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+            className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary"
             aria-hidden="true"
           />
           <span className="leading-relaxed">{item}</span>
@@ -330,19 +330,33 @@ export type BulletItem = string | { title: string; subtitle?: string }
 
 export function BulletList({ items }: { items: BulletItem[] }) {
   return (
-    <ul className="mt-3 list-disc space-y-2 pl-5">
+    <ul className="mt-3 space-y-2">
       {items.map((item) => {
         if (typeof item === 'string') {
-          return <li key={item}>{item}</li>
+          return (
+            <li key={item} className="flex gap-3">
+              <span
+                className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary"
+                aria-hidden="true"
+              />
+              <span>{item}</span>
+            </li>
+          )
         }
         return (
-          <li key={item.title}>
-            <span className="font-medium text-text">{item.title}</span>
-            {item.subtitle ? (
-              <span className="mt-0.5 block text-sm text-muted">
-                {item.subtitle}
-              </span>
-            ) : null}
+          <li key={item.title} className="flex gap-3">
+            <span
+              className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-secondary"
+              aria-hidden="true"
+            />
+            <span>
+              <span className="font-medium text-text">{item.title}</span>
+              {item.subtitle ? (
+                <span className="mt-0.5 block text-sm text-muted">
+                  {item.subtitle}
+                </span>
+              ) : null}
+            </span>
           </li>
         )
       })}
