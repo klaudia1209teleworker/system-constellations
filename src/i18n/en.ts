@@ -85,9 +85,9 @@ export const en: SiteContent = {
     ],
     approachesTitle: 'Three Hellinger approaches',
     approaches: [
-      'Classical Constellations',
-      'Movements of the Soul',
-      'Movements of the Spirit',
+      { title: 'Classical Constellations' },
+      { title: 'Movements of the Soul' },
+      { title: 'Movements of the Spirit' },
     ],
     approachesNote:
       'Stephen will teach each method; however, he will emphasize Hellinger’s Classical approach. Student competencies will primarily be evaluated using Classical Constellations.',

@@ -3,6 +3,7 @@ import { LineCta } from './components/LineCta'
 import { Section } from './components/Section'
 import { SiteNav } from './components/SiteNav'
 import {
+  BilingualNameList,
   BulletList,
   Callout,
   CheckList,
@@ -68,27 +69,33 @@ export default function App() {
         width="wide"
         lead={t.curriculum.lead}
       >
-        <Subheading>{t.curriculum.section1}</Subheading>
+        <Subheading subtitle={t.curriculum.section1En}>
+          {t.curriculum.section1}
+        </Subheading>
         <SplitBlocks items={t.curriculum.pillars} />
 
         <h4 className="mt-8 text-lg font-semibold text-primary">
           {t.curriculum.approachesTitle}
         </h4>
-        <CheckList items={t.curriculum.approaches} />
+        <BilingualNameList items={t.curriculum.approaches} />
         <p className="mt-6 max-w-3xl">{t.curriculum.approachesNote}</p>
 
         <Subheading>{t.curriculum.section2}</Subheading>
         <p className="max-w-3xl">{t.curriculum.intentLead}</p>
         <CheckList items={t.curriculum.intentItems} />
 
-        <Subheading>{t.curriculum.section3}</Subheading>
+        <Subheading subtitle={t.curriculum.section3En}>
+          {t.curriculum.section3}
+        </Subheading>
         <SplitBlocks items={t.curriculum.methods} />
         <p className="mt-6 max-w-3xl text-muted">{t.curriculum.methodsNote}</p>
 
         <Subheading>{t.curriculum.section4}</Subheading>
         <StepList steps={t.curriculum.process} />
 
-        <Subheading>{t.curriculum.section5}</Subheading>
+        <Subheading subtitle={t.curriculum.section5En}>
+          {t.curriculum.section5}
+        </Subheading>
         <TopicRows
           topics={t.curriculum.topics.map((topic) => ({
             title: topic.title,
@@ -123,7 +130,9 @@ export default function App() {
         <p className="max-w-3xl">{t.terms.attitudeLead}</p>
         <CheckList items={t.terms.attitudeItems} />
 
-        <Subheading>{t.terms.specialTitle}</Subheading>
+        <Subheading subtitle={t.terms.specialTitleEn}>
+          {t.terms.specialTitle}
+        </Subheading>
         <Callout tone="highlight" title={t.terms.specialCalloutTitle}>
           {t.terms.specialParagraphs.map((paragraph, index) => (
             <p key={paragraph.slice(0, 24)} className={index > 0 ? 'mt-3' : ''}>
@@ -153,7 +162,11 @@ export default function App() {
 
         <Subheading>{t.terms.homeworkTitle}</Subheading>
         <p>{t.terms.homeworkLead}</p>
-        <Callout tone="primary" title={t.terms.homeworkOneTitle}>
+        <Callout
+          tone="primary"
+          title={t.terms.homeworkOneTitle}
+          subtitle={t.terms.homeworkOneTitleEn}
+        >
           {t.terms.homeworkOneBody}
         </Callout>
 
