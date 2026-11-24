@@ -224,16 +224,16 @@ export default function App() {
         </div>
 
         <Subheading>{t.teacher.credentialsTitle}</Subheading>
-        <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        <ul className="mt-4 space-y-0 border-y border-border">
           {t.teacher.credentials.map((item) => (
-            <p
+            <li
               key={item}
-              className="border-b border-border pb-2 font-medium text-primary sm:border-b-0 sm:border-r sm:pb-0 sm:pr-5 sm:last:border-r-0"
+              className="border-b border-border py-3 font-medium text-primary last:border-b-0"
             >
               {item}
-            </p>
+            </li>
           ))}
-        </div>
+        </ul>
       </Section>
 
       <Section
