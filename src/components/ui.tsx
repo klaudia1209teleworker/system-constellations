@@ -350,16 +350,27 @@ export function BulletList({ items }: { items: BulletItem[] }) {
   )
 }
 
-/** 雙語名稱列表（中文主標＋英文次行） */
+/** 雙語名稱列表（中文主標＋英文次行；預設橫向欄位） */
 export function BilingualNameList({
   items,
+  layout = 'row',
 }: {
   items: { title: string; subtitle?: string }[]
+  layout?: 'row' | 'stack'
 }) {
+  const listClass =
+    layout === 'row'
+      ? 'mt-4 grid gap-6 sm:grid-cols-3'
+      : 'mt-4 space-y-4'
+  const itemClass =
+    layout === 'row'
+      ? 'border-t-2 border-secondary pt-3'
+      : 'border-l-2 border-secondary pl-3'
+
   return (
-    <ul className="mt-4 space-y-4">
+    <ul className={listClass}>
       {items.map((item) => (
-        <li key={item.title} className="border-l-2 border-secondary pl-3">
+        <li key={item.title} className={itemClass}>
           <p className="font-medium text-primary">{item.title}</p>
           {item.subtitle ? (
             <p className="mt-0.5 text-sm text-muted">{item.subtitle}</p>
