@@ -124,6 +124,13 @@ export interface SiteContent {
     title: string
     lead: string
     facts: LabelValue[]
+    scheduleButton: string
+    scheduleWindowTitle: string
+    scheduleMonthLabel: string
+    scheduleDaysLabel: string
+    scheduleCloseHint: string
+    schedulePopupBlocked: string
+    schedule: { month: string; days: string }[]
     cta: string
   }
   line: {
