@@ -151,7 +151,8 @@ export const zh: SiteContent = {
         ],
       },
       {
-        title: '愛的序位（Orders of Love）',
+        title: '愛的序位',
+        subtitle: 'Orders of Love',
         detail:
           '在祖先、原生家庭、伴侶關係、成年後的家庭關係，以及個人靈魂中運作的隱性邏輯、規則與模式。',
       },
