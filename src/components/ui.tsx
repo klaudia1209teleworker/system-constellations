@@ -120,7 +120,11 @@ export function SplitBlocks({
   items: { title: string; body: ReactNode }[]
 }) {
   return (
-    <div className="mt-6 grid gap-6 md:grid-cols-2">
+    <div
+      className={`mt-6 grid gap-6 md:grid-cols-2 ${
+        items.length >= 3 ? 'lg:grid-cols-3' : ''
+      }`}
+    >
       {items.map((item, index) => (
         <div
           key={item.title}

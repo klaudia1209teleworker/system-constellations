@@ -7,9 +7,6 @@ import {
   Callout,
   CheckList,
   FactGrid,
-  IndexLinks,
-  PriceCompare,
-  ScheduleGrid,
   SplitBlocks,
   StepList,
   Subheading,
@@ -34,35 +31,32 @@ export default function App() {
       >
         <div className="max-w-2xl space-y-4">
           {t.intro.paragraphs.map((paragraph) => (
-            <p key={paragraph.slice(0, 24)}>{paragraph}</p>
+            <p key={paragraph.slice(0, 28)}>{paragraph}</p>
           ))}
         </div>
 
-        <Subheading>{t.intro.indexTitle}</Subheading>
-        <IndexLinks items={t.intro.index} />
+        <Subheading>{t.intro.themesTitle}</Subheading>
+        <ol className="mt-4 grid gap-3 sm:grid-cols-3">
+          {t.intro.themes.map((theme, index) => (
+            <li
+              key={theme}
+              className="border-t-2 border-secondary pt-3"
+            >
+              <span className="font-serif text-sm font-bold text-secondary">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <p className="mt-2 font-medium text-primary">{theme}</p>
+            </li>
+          ))}
+        </ol>
+
+        <Subheading>{t.intro.audienceTitle}</Subheading>
+        <CheckList items={t.intro.audience} />
+
+        <FactGrid items={t.intro.facts} />
         <p className="mt-8 text-muted">{t.intro.closing}</p>
-      </Section>
-
-      <Section
-        id="notice"
-        title={t.notice.title}
-        tone="notice"
-        lead={t.notice.lead}
-      >
-        <div className="grid gap-6 md:grid-cols-2">
-          {t.notice.callouts.map((item) => (
-            <Callout key={item.title} tone="highlight" title={item.title}>
-              {item.body}
-            </Callout>
-          ))}
-        </div>
-
-        <Subheading>{t.notice.processTitle}</Subheading>
-        <StepList steps={t.notice.steps} />
-
-        <p className="mt-8 text-sm text-muted">{t.notice.copyright}</p>
-        <div className="mt-8">
-          <LineCta label={t.notice.cta} />
+        <div className="mt-6">
+          <LineCta label={t.hero.cta} />
         </div>
       </Section>
 
@@ -79,8 +73,8 @@ export default function App() {
         <h4 className="mt-8 text-lg font-semibold text-primary">
           {t.curriculum.approachesTitle}
         </h4>
-        <FactGrid items={t.curriculum.approaches} />
-        <p className="mt-6 max-w-3xl">{t.curriculum.classicalNote}</p>
+        <CheckList items={t.curriculum.approaches} />
+        <p className="mt-6 max-w-3xl">{t.curriculum.approachesNote}</p>
 
         <Subheading>{t.curriculum.section2}</Subheading>
         <p className="max-w-3xl">{t.curriculum.intentLead}</p>
@@ -115,13 +109,23 @@ export default function App() {
         width="wide"
         lead={t.terms.lead}
       >
-        <p className="max-w-3xl">{t.terms.expectationsLead}</p>
-        <CheckList items={t.terms.expectations} />
+        <Subheading>{t.terms.attendanceTitle}</Subheading>
+        <CheckList items={t.terms.attendanceItems} />
+
+        <Subheading>{t.terms.learningTitle}</Subheading>
+        <p className="max-w-3xl">{t.terms.learningBody}</p>
+
+        <Subheading>{t.terms.growthTitle}</Subheading>
+        <p className="max-w-3xl">{t.terms.growthBody}</p>
+
+        <Subheading>{t.terms.attitudeTitle}</Subheading>
+        <p className="max-w-3xl">{t.terms.attitudeLead}</p>
+        <CheckList items={t.terms.attitudeItems} />
 
         <Subheading>{t.terms.specialTitle}</Subheading>
         <Callout tone="highlight" title={t.terms.specialCalloutTitle}>
           {t.terms.specialParagraphs.map((paragraph, index) => (
-            <p key={paragraph.slice(0, 20)} className={index > 0 ? 'mt-3' : ''}>
+            <p key={paragraph.slice(0, 24)} className={index > 0 ? 'mt-3' : ''}>
               {paragraph}
             </p>
           ))}
@@ -139,7 +143,7 @@ export default function App() {
               {t.terms.privacyTitle}
             </h4>
             {t.terms.privacyParagraphs.map((paragraph) => (
-              <p key={paragraph.slice(0, 20)} className="mt-3">
+              <p key={paragraph.slice(0, 24)} className="mt-3">
                 {paragraph}
               </p>
             ))}
@@ -232,44 +236,14 @@ export default function App() {
       </Section>
 
       <Section
-        id="enroll"
-        title={t.enroll.title}
+        id="overview"
+        title={t.overview.title}
         width="wide"
-        lead={t.enroll.lead}
+        lead={t.overview.lead}
       >
-        <FactGrid items={t.enroll.facts} />
-
-        <Subheading>{t.enroll.scheduleTitle}</Subheading>
-        <ScheduleGrid
-          rows={t.enroll.schedule}
-          monthLabel={t.enroll.scheduleMonthLabel}
-          daysLabel={t.enroll.scheduleDaysLabel}
-        />
-
-        <Subheading>{t.enroll.paymentTitle}</Subheading>
-        <PriceCompare columns={t.enroll.prices} />
-
-        <Subheading>{t.enroll.prepareTitle}</Subheading>
-        <ol className="mt-4 grid gap-x-8 gap-y-3 sm:grid-cols-2">
-          {t.enroll.prepareItems.map((item, index) => (
-            <li key={item} className="flex gap-3 border-b border-border py-3">
-              <span className="font-serif text-secondary">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <span>{item}</span>
-            </li>
-          ))}
-        </ol>
-
-        <p className="mt-8 text-sm text-muted">
-          {t.enroll.remittanceOrderNote}
-        </p>
-
-        <Subheading>{t.enroll.refundTitle}</Subheading>
-        <StepList steps={t.enroll.refundSteps} />
-
+        <FactGrid items={t.overview.facts} />
         <div className="mt-10">
-          <LineCta label={t.enroll.cta} />
+          <LineCta label={t.overview.cta} />
         </div>
       </Section>
 

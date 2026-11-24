@@ -30,7 +30,7 @@ export function Hero() {
         <div className="animate-soft-rise mt-8 flex flex-wrap items-center gap-4">
           <LineCta variant="surface" label={t.hero.cta} />
           <a
-            href="#notice"
+            href="#curriculum"
             className="text-sm font-medium text-surface/85 underline-offset-4 transition hover:text-surface hover:underline"
           >
             {t.hero.noticeLink}
