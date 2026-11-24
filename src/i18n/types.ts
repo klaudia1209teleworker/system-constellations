@@ -29,18 +29,6 @@ export interface TopicItem {
   detail?: string
 }
 
-export interface PriceColumn {
-  title: string
-  price: string
-  note: string
-  steps: StepItem[]
-}
-
-export interface ScheduleRow {
-  month: string
-  days: string
-}
-
 export interface SiteContent {
   meta: {
     title: string
@@ -64,18 +52,12 @@ export interface SiteContent {
     eyebrow: string
     lead: string
     paragraphs: string[]
-    indexTitle: string
-    index: { href: string; label: string; desc: string }[]
+    themesTitle: string
+    themes: string[]
+    audienceTitle: string
+    audience: string[]
+    facts: LabelValue[]
     closing: string
-  }
-  notice: {
-    title: string
-    lead: string
-    callouts: { title: string; body: string }[]
-    processTitle: string
-    steps: StepItem[]
-    copyright: string
-    cta: string
   }
   curriculum: {
     title: string
@@ -84,8 +66,8 @@ export interface SiteContent {
     section1: string
     pillars: SplitItem[]
     approachesTitle: string
-    approaches: LabelValue[]
-    classicalNote: string
+    approaches: string[]
+    approachesNote: string
     section2: string
     intentLead: string
     intentItems: string[]
@@ -101,8 +83,15 @@ export interface SiteContent {
   terms: {
     title: string
     lead: string
-    expectationsLead: string
-    expectations: string[]
+    attendanceTitle: string
+    attendanceItems: string[]
+    learningTitle: string
+    learningBody: string
+    growthTitle: string
+    growthBody: string
+    attitudeTitle: string
+    attitudeLead: string
+    attitudeItems: string[]
     specialTitle: string
     specialCalloutTitle: string
     specialParagraphs: string[]
@@ -131,21 +120,10 @@ export interface SiteContent {
     credentialsTitle: string
     credentials: string[]
   }
-  enroll: {
+  overview: {
     title: string
     lead: string
     facts: LabelValue[]
-    scheduleTitle: string
-    scheduleMonthLabel: string
-    scheduleDaysLabel: string
-    schedule: ScheduleRow[]
-    paymentTitle: string
-    prices: PriceColumn[]
-    prepareTitle: string
-    prepareItems: string[]
-    remittanceOrderNote: string
-    refundTitle: string
-    refundSteps: StepItem[]
     cta: string
   }
   line: {
@@ -157,8 +135,5 @@ export interface SiteContent {
   footer: {
     brand: string
     copyright: string
-  }
-  cta: {
-    applyViaLine: string
   }
 }
