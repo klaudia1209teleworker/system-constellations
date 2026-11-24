@@ -9,4 +9,5 @@
 5. `#overview` — 日期地點
 
 - 前言區塊（`#intro`）仍保留於頁面，**不**列入導覽
+- 中英切換**不**放在導覽列；置於 Hero 右上角（`LanguageSwitcher`）
 - 文案來源：`src/i18n/zh.ts`、`en.ts` 的 `nav.links`
