@@ -60,7 +60,8 @@ export const zh: SiteContent = {
     title: '三合一培訓內容介紹',
     eyebrow: '含個人靈性成長＆能量學內容',
     lead: '不僅是一套系統排列師的培訓，同時也是一場著重於個人與靈性發展的研習工作坊。',
-    section1: '一、培訓背景與定位（Context）',
+    section1: '一、培訓背景與定位',
+    section1En: 'Context',
     pillars: [
       {
         title: '海靈格古典排列家排師認證培訓',
@@ -77,15 +78,24 @@ export const zh: SiteContent = {
     ],
     approachesTitle: '海靈格三種取向',
     approaches: [
-      '古典排列（Classical Constellations）',
-      '靈魂動力排列（Movements of the Soul）',
-      '精神動力排列（Movements of the Spirit）',
+      {
+        title: '古典排列',
+        subtitle: 'Classical Constellations',
+      },
+      {
+        title: '靈魂動力排列',
+        subtitle: 'Movements of the Soul',
+      },
+      {
+        title: '精神動力排列',
+        subtitle: 'Movements of the Spirit',
+      },
     ],
     approachesNote:
       'Stephen 老師將教授每一種排列方法，但會以海靈格的古典排列方法為主要教學重點。學員的能力評量，也將主要以古典排列作為評核依據。',
     section2: '二、Stephen Victor 的教學意圖',
     intentLead:
-      '培養能夠以尊重人性、善待他人的態度生活與工作的實務工作者，並在學習如何「完整地去愛」（Love Completely）的過程中：',
+      '培養能夠以尊重人性、善待他人的態度生活與工作的實務工作者，並在學習如何「完整地去愛」的過程中：',
     intentItems: [
       '活出並展現自己的個人力量。',
       '建立自主性與自我主導能力。',
@@ -93,7 +103,8 @@ export const zh: SiteContent = {
       '進一步協助他人經歷改變與療癒。',
       '陪伴他人成為自己所要成為的那個人。',
     ],
-    section3: '三、教學方式（Teaching Process）',
+    section3: '三、教學方式',
+    section3En: 'Teaching Process',
     methods: [
       {
         title: '親身體驗',
@@ -109,45 +120,61 @@ export const zh: SiteContent = {
     section4: '四、培訓的具體架構與流程',
     process: [
       {
-        title: '講授（Lecture）',
+        title: '講授',
+        subtitle: 'Lecture',
         body: '建立理論基礎與核心概念。',
       },
       {
-        title: '探索練習（Discovery Exercises）',
+        title: '探索練習',
+        subtitle: 'Discovery Exercises',
         body: '透過引導式練習，發現並探索新的理解。',
       },
       {
-        title: '體驗式學習（Experiential Learning）',
+        title: '體驗式學習',
+        subtitle: 'Experiential Learning',
         body: '藉由親身參與（包含學員個人生命議題排列），深化學習與感知。',
       },
       {
-        title: '示範與觀察（Demonstration / Observation）',
+        title: '示範與觀察',
+        subtitle: 'Demonstration / Observation',
         body: '觀摩實際操作，理解排列的進行方式。',
       },
       {
-        title: '專業能力培養（Competency）',
+        title: '專業能力培養',
+        subtitle: 'Competency',
         body: '透過知識、智慧、觀察與實際練習，逐步建立專業引導能力。',
       },
     ],
-    section5: '五、課程內容（Content）',
+    section5: '五、課程內容',
+    section5En: 'Content',
     topics: [
       {
         title: '海靈格家族排列與組織排列的起源與發展',
         subtitle:
           'The Origins Story of Hellinger Family, and Organizational Constellations',
         bullets: [
-          '古典排列（Classical Constellations）',
-          '介紹靈魂動力排列（Movements of the Soul）與精神動力排列（Movements of Spirit Constellations）',
+          {
+            title: '古典排列',
+            subtitle: 'Classical Constellations',
+          },
+          {
+            title: '介紹靈魂動力排列與精神動力排列',
+            subtitle:
+              'Movements of the Soul; Movements of Spirit Constellations',
+          },
         ],
       },
       {
         title: '海靈格所提出的三種「靈魂」與「意識」',
         subtitle: 'Hellinger’s Three “Souls”, “Consciousnesses”',
         bullets: [
-          '個人靈魂（Individual Soul）',
-          '家族靈魂（Family Soul）',
-          '更大的靈魂／超越性的靈魂（Greater / Beyond）',
-          '場域（Field）',
+          { title: '個人靈魂', subtitle: 'Individual Soul' },
+          { title: '家族靈魂', subtitle: 'Family Soul' },
+          {
+            title: '更大的靈魂／超越性的靈魂',
+            subtitle: 'Greater / Beyond',
+          },
+          { title: '場域', subtitle: 'Field' },
         ],
       },
       {
@@ -160,12 +187,16 @@ export const zh: SiteContent = {
         title: '組織排列的核心原則',
         subtitle: 'Tenets of Organizational Constellations',
         bullets: [
-          '商業／企業排列（Business or Enterprise Constellations）',
+          {
+            title: '商業／企業排列',
+            subtitle: 'Business or Enterprise Constellations',
+          },
           '在人與人所組成的組織中運作的隱性邏輯、規則與模式。',
         ],
       },
       {
-        title: '形態生成場（Morphogenic Fields）—— Rupert Sheldrake',
+        title: '形態生成場',
+        subtitle: 'Morphogenic Fields — Rupert Sheldrake',
         detail: '家庭與人類組織運作時所處的非尋常媒介與場域。',
       },
       {
@@ -186,9 +217,12 @@ export const zh: SiteContent = {
         title: '個人靈性成長與能量發展學',
         subtitle: 'Personal and Energetic Development',
         bullets: [
-          '預設前提（Presuppositions）',
-          '安地斯神秘學（Andean Mysticism）',
-          '人的三個層面（Three Realms of a Person）：身體層面、心理層面、能量層面',
+          { title: '預設前提', subtitle: 'Presuppositions' },
+          { title: '安地斯神秘學', subtitle: 'Andean Mysticism' },
+          {
+            title: '人的三個層面：身體層面、心理層面、能量層面',
+            subtitle: 'Three Realms of a Person',
+          },
         ],
       },
     ],
@@ -229,7 +263,8 @@ export const zh: SiteContent = {
       '學習、理解、內化並實際展現本培訓研習所提出的各項預設前提。',
       '培訓進行期間，手機必須關機，休息時間除外。',
     ],
-    specialTitle: '特別注意事項（SPECIAL NOTE）',
+    specialTitle: '特別注意事項',
+    specialTitleEn: 'SPECIAL NOTE',
     specialCalloutTitle: '不可為自己／自家／任職組織排列',
     specialParagraphs: [
       '系統排列師不得為自己進行家族排列，也不得為自己的家庭成員設置家族排列；同樣地，也不得為自己任職的工作場所進行組織排列。',
@@ -245,7 +280,8 @@ export const zh: SiteContent = {
     ],
     homeworkTitle: '課後作業',
     homeworkLead: '學員同意完成培訓過程中所指定的各項作業。',
-    homeworkOneTitle: '作業一（Homework Assignment One）',
+    homeworkOneTitle: '作業一',
+    homeworkOneTitleEn: 'Homework Assignment One',
     homeworkOneBody:
       '在培訓的前六個月，學員同意無條件地善待：自己、所有其他人、所發生的事件、所面對的各種情況。',
     copyrightTitle: '培訓錄音與著作權',

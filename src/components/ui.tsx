@@ -1,10 +1,21 @@
 import type { ReactNode } from 'react'
 
-export function Subheading({ children }: { children: ReactNode }) {
+export function Subheading({
+  children,
+  subtitle,
+}: {
+  children: ReactNode
+  subtitle?: string
+}) {
   return (
-    <h3 className="mt-12 scroll-mt-24 text-xl font-semibold text-text first:mt-0 md:text-2xl">
-      {children}
-    </h3>
+    <div className="mt-12 scroll-mt-24 first:mt-0">
+      <h3 className="text-xl font-semibold text-text md:text-2xl">{children}</h3>
+      {subtitle ? (
+        <p className="mt-1 text-sm font-normal text-muted md:text-base">
+          {subtitle}
+        </p>
+      ) : null}
+    </div>
   )
 }
 
@@ -43,7 +54,7 @@ export function FactGrid({
 export function StepList({
   steps,
 }: {
-  steps: { title: string; body?: ReactNode }[]
+  steps: { title: string; subtitle?: string; body?: ReactNode }[]
 }) {
   return (
     <ol className="mt-6 space-y-0">
@@ -62,6 +73,9 @@ export function StepList({
           </div>
           <div className={index < steps.length - 1 ? 'pb-8' : ''}>
             <p className="pt-1 font-medium text-primary">{step.title}</p>
+            {step.subtitle ? (
+              <p className="mt-0.5 text-sm text-muted">{step.subtitle}</p>
+            ) : null}
             {step.body ? (
               <div className="mt-2 text-base leading-relaxed text-text">
                 {step.body}
@@ -78,10 +92,12 @@ export function StepList({
 export function Callout({
   tone = 'highlight',
   title,
+  subtitle,
   children,
 }: {
   tone?: 'highlight' | 'accent' | 'primary'
   title?: string
+  subtitle?: string
   children: ReactNode
 }) {
   const border =
@@ -102,7 +118,12 @@ export function Callout({
       className={`mt-6 border-l-[3px] ${border} bg-surface/80 py-4 pl-4 pr-3`}
     >
       {title ? (
-        <p className={`font-semibold ${titleColor}`}>{title}</p>
+        <div>
+          <p className={`font-semibold ${titleColor}`}>{title}</p>
+          {subtitle ? (
+            <p className="mt-0.5 text-sm font-normal text-muted">{subtitle}</p>
+          ) : null}
+        </div>
       ) : null}
       <div
         className={`text-base leading-relaxed text-text ${title ? 'mt-2' : ''}`}
@@ -305,11 +326,45 @@ export function IndexLinks({
   )
 }
 
-export function BulletList({ items }: { items: string[] }) {
+export type BulletItem = string | { title: string; subtitle?: string }
+
+export function BulletList({ items }: { items: BulletItem[] }) {
   return (
     <ul className="mt-3 list-disc space-y-2 pl-5">
+      {items.map((item) => {
+        if (typeof item === 'string') {
+          return <li key={item}>{item}</li>
+        }
+        return (
+          <li key={item.title}>
+            <span className="font-medium text-text">{item.title}</span>
+            {item.subtitle ? (
+              <span className="mt-0.5 block text-sm text-muted">
+                {item.subtitle}
+              </span>
+            ) : null}
+          </li>
+        )
+      })}
+    </ul>
+  )
+}
+
+/** 雙語名稱列表（中文主標＋英文次行） */
+export function BilingualNameList({
+  items,
+}: {
+  items: { title: string; subtitle?: string }[]
+}) {
+  return (
+    <ul className="mt-4 space-y-4">
       {items.map((item) => (
-        <li key={item}>{item}</li>
+        <li key={item.title} className="border-l-2 border-secondary pl-3">
+          <p className="font-medium text-primary">{item.title}</p>
+          {item.subtitle ? (
+            <p className="mt-0.5 text-sm text-muted">{item.subtitle}</p>
+          ) : null}
+        </li>
       ))}
     </ul>
   )

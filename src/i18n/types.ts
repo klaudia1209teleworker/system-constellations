@@ -12,8 +12,16 @@ export interface LabelValue {
 
 export interface StepItem {
   title: string
+  subtitle?: string
   body: string
 }
+
+export interface BilingualName {
+  title: string
+  subtitle?: string
+}
+
+export type BulletItem = string | BilingualName
 
 export interface SplitItem {
   title: string
@@ -25,7 +33,7 @@ export interface SplitItem {
 export interface TopicItem {
   title: string
   subtitle?: string
-  bullets?: string[]
+  bullets?: BulletItem[]
   detail?: string
 }
 
@@ -64,19 +72,22 @@ export interface SiteContent {
     eyebrow: string
     lead: string
     section1: string
+    section1En?: string
     pillars: SplitItem[]
     approachesTitle: string
-    approaches: string[]
+    approaches: BilingualName[]
     approachesNote: string
     section2: string
     intentLead: string
     intentItems: string[]
     section3: string
+    section3En?: string
     methods: SplitItem[]
     methodsNote: string
     section4: string
     process: StepItem[]
     section5: string
+    section5En?: string
     topics: TopicItem[]
     topicsNote: string
   }
@@ -93,6 +104,7 @@ export interface SiteContent {
     attitudeLead: string
     attitudeItems: string[]
     specialTitle: string
+    specialTitleEn?: string
     specialCalloutTitle: string
     specialParagraphs: string[]
     partnersTitle: string
@@ -102,6 +114,7 @@ export interface SiteContent {
     homeworkTitle: string
     homeworkLead: string
     homeworkOneTitle: string
+    homeworkOneTitleEn?: string
     homeworkOneBody: string
     copyrightTitle: string
     copyrightFacts: LabelValue[]
