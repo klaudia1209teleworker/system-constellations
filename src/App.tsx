@@ -235,16 +235,7 @@ export default function App() {
         <FactGrid items={t.teacher.timeline} />
 
         <Subheading>{t.teacher.servicesTitle}</Subheading>
-        <div className="grid gap-3 sm:grid-cols-2">
-          {t.teacher.services.map((item) => (
-            <div
-              key={item}
-              className="border-l-2 border-secondary py-1 pl-3 text-text"
-            >
-              {item}
-            </div>
-          ))}
-        </div>
+        <CheckList items={t.teacher.services} />
 
         <Subheading>{t.teacher.credentialsTitle}</Subheading>
         <BadgeList items={t.teacher.credentials} />
