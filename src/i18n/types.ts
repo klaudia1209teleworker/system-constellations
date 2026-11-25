@@ -51,7 +51,8 @@ export interface SiteContent {
   }
   hero: {
     title: string
-    lead: string
+    /** 可省略；英文 Hero 不顯示小字說明 */
+    lead?: string
     cta: string
     noticeLink: string
   }
