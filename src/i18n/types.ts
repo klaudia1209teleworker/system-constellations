@@ -92,7 +92,7 @@ export interface SiteContent {
     section5: string
     section5En?: string
     topics: TopicItem[]
-    topicsNote: string
+    topicsNote?: string
   }
   terms: {
     title: string

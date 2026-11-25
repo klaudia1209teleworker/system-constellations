@@ -117,7 +117,9 @@ export default function App() {
             ),
           }))}
         />
-        <p className="mt-6 max-w-3xl text-muted">{t.curriculum.topicsNote}</p>
+        {t.curriculum.topicsNote ? (
+          <p className="mt-6 max-w-3xl text-muted">{t.curriculum.topicsNote}</p>
+        ) : null}
       </Section>
 
       <Section
