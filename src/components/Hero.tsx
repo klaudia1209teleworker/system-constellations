@@ -17,16 +17,18 @@ export function Hero() {
         <LanguageSwitcher />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-3xl px-4 pb-16 pt-28 md:px-8 md:pb-24">
+      <div className="relative z-10 mx-auto w-full max-w-4xl px-4 pb-16 pt-28 md:px-8 md:pb-24">
         <p className="animate-soft-rise mb-4 text-sm font-medium tracking-[0.18em] text-secondary">
           STEPHEN VICTOR
         </p>
-        <h1 className="animate-fade-up font-serif text-4xl font-bold leading-tight text-surface md:text-5xl">
+        <h1 className="animate-fade-up font-serif text-3xl font-bold leading-tight text-surface sm:text-4xl md:text-5xl">
           {t.hero.title}
         </h1>
-        <p className="animate-soft-rise mt-5 max-w-xl text-base leading-relaxed text-surface/90 md:text-lg">
-          {t.hero.lead}
-        </p>
+        {t.hero.lead ? (
+          <p className="animate-soft-rise mt-5 max-w-xl text-base leading-relaxed text-surface/90 md:text-lg">
+            {t.hero.lead}
+          </p>
+        ) : null}
         <div className="animate-soft-rise mt-8 flex flex-wrap items-center gap-4">
           <LineCta variant="surface" label={t.hero.cta} />
           <a

@@ -20,8 +20,8 @@ export const en: SiteContent = {
     langSwitcherAria: 'Switch language',
   },
   hero: {
-    title: 'Constellation Facilitation Training',
-    lead: 'Facilitator training with personal and spiritual development, and energetic work—so that every student leaves with real growth and healing.',
+    title:
+      'Constellation Facilitation and Energetic/Spiritual Development Training',
     cta: 'Contact via official Line',
     noticeLink: 'Explore the curriculum',
   },
